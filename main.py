@@ -1,5 +1,6 @@
 #
-'''def count_char(text, char):
+'''
+def count_char(text, char):
     count = 0
     for c in text:
         if c == char:
@@ -15,7 +16,8 @@ with open(filename) as f:
 for char in "abcdefghijklmnopqrstuvwxyz":
     perc = 100 * count_char(text, char) / len(text)
     print("{0} - {1}%".format(char, round(perc, 2)))
-
+'''
+'''
 txt = input()
 c = txt.split(' ')
 d = 0
@@ -25,33 +27,55 @@ for i in c:
         d = len(i)
         e = i
 print(e)
+'''
+'''
 
 print((lambda x: x**2 + 5*x + 4) (-4))
-
-
+'''
+'''
 nums = [11, 22, 33, 44, 55]
 result = list(map(lambda x: x + 5, nums))
 print(result)
+'''
+'''
+def add_five(x):
+    return x + 5
 
-def is_even(x):
-    if x%2==0:
-        return x
-
-def get_even():
-    num = 44
-    while True:
-        if is_even(num):
-            yield num
-        print(num)
-
-print(get_even())
-
+nums = [11, 22, 33, 44, 55]
+result = list(map(add_five, nums))
+print(result)
+'''
+'''
+nums = [11, 22, 33, 44, 55]
+res = list(filter(lambda x: x%2==0, nums))
+print(res)
+'''
+'''
 def numbers(x):
     for i in range(x):
         if i % 2 == 0:
             yield i
-print(list(numbers(11)))
+print(list(numbers(20)))
+'''
+'''
+def countdown(i):
+    while i > 0:
+        yield i
+        i -= 1
 
+for i in countdown(6):
+    print(i)
+'''
+'''
+def make_word():
+    word = ""
+    for ch in "spam":
+        word +=ch
+        yield word
+
+print(list(make_word()))
+'''
+'''
 def decor(func):
     def wrap():
         print("============")
@@ -61,8 +85,9 @@ def decor(func):
 @decor
 def print_text():
     print("Hello world!")
+print_text()
+'''
 
-print_text()'''
 
 
 
